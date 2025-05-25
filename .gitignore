@@ -1,1 +1,5 @@
-/vendor/
+*.txt
+*.crt
+*.cer
+*.csr
+*.key
