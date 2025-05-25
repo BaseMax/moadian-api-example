@@ -7,6 +7,8 @@
  *
  **/
 
+require_once "nonce.php";
+
 // Config
 $clientId = 'xxxxxxxxx';
 $privateKeyPath = __DIR__ . '/private_key.txt';
@@ -46,4 +48,5 @@ openssl_sign($dataToSign, $signature, $privateKey, OPENSSL_ALGO_SHA256);
 $encodedSignature = base64url_encode($signature);
 
 $jwsToken = $encodedHeader . '.' . $encodedPayload . '.' . $encodedSignature;
-print $jwsToken;
+
+print "JWS Token: $jwsToken\n";
