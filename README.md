@@ -2,7 +2,7 @@
 
 This repository provides a simple step-by-step PHP example of how to connect to the official Moadian API of Iran's tax organization.
 
-> A step-by-step PHP implementation for connecting to the Iranian National Tax Administration’s (INTA) Moadian API. It guides you through generating a nonce token, signing it with digital certificates using JWS (JSON Web Signature), and sending authenticated requests to the API—providing a clear workflow for secure integration with Iran's electronic.
+> A step-by-step PHP implementation for connecting to the Iranian National Tax Administration’s (INTA) Moadian API. It guides you through generating a nonce token, signing it with digital certificates using JWS (JSON Web Signature), and sending authenticated requests to the API-providing a clear workflow for secure integration with Iran's electronic.
 
 ## What is the Moadian API?
 
