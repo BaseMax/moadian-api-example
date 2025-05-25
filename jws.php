@@ -7,7 +7,7 @@
  *
  **/
 
-require_once "nonce.php";
+require_once "nonce.php"; // for $nonce
 
 // Config
 $clientId = 'xxxxxxxxx';
