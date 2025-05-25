@@ -131,8 +131,6 @@ Once you have your keys and certificate:
 - Go to [https://tp.tax.gov.ir/membership/normalUniqueID/add](https://tp.tax.gov.ir/membership/normalUniqueID/add)
 - Register and connect your certificate
 
-![tp-final](demo/tp-tax-gov-ir.jpg)
-
 ---
 
 ## Using
