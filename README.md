@@ -1,7 +1,47 @@
 # moadian-api-example
 
+A simple PHP-based example for connecting to Iran’s Moadian (مودیان) tax system API.
+
 # What is moadian API?
 
+The Moadian API (سامانه مودیان) is a government-provided interface for registered businesses in Iran to submit tax-related data digitally. This API is accessible through https://tp.tax.gov.ir/requestsmanager/api/v2/.
+
+This repository provides a minimal, step-by-step PHP example showing how to:
+
+- Request a nonce token.
+- Create a signed JWS token using your certificate and keys.
+- Send a test request to fetch server information from the Moadian API.
+
+## 🚀 Quick Start
+
+Make sure you have your required files ready:
+
+- Private Key (.key)
+- Public Key (.pem)
+- Certificate (.crt) (NOT CSR file)
+
+Steps to Run:
+
+```bash
+php nonce.php               # Step 1: Get the nonce token
+php jws.php                 # Step 2: Generate a signed JWS token
+php server-information.php  # Step 3: Send a test request using the token
+```
+
+Ensure you've configured your key and certificate paths correctly in the jws.php file.
+
+## 📂 File Structure
+
+- `nonce.php`: Retrieves a short-lived nonce token from Moadian.
+- `jws.php`: Signs the nonce using your private key and certificate to generate a JWS.
+- `server-information.php`: Sends a test request using the JWS to fetch server info.
+
+## 📄 API Documentation
+
+**Base URL:** https://tp.tax.gov.ir/requestsmanager/api/v2/
+
+**Official PDF documentation (as of 2025-05-25):**
+![Official PDF documentation](دستورالعمل%20فنی%20اتصال%20به%20سامانه%20مودیان.pdf)
 
 ## Using
 
