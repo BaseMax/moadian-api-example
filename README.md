@@ -1,47 +1,129 @@
 # moadian-api-example
 
-A simple PHP-based example for connecting to Iran’s Moadian (مودیان) tax system API.
+This repository provides a simple step-by-step PHP example of how to connect to the official Moadian API of Iran's tax organization.
 
-# What is moadian API?
+## What is the Moadian API?
 
-The Moadian API (سامانه مودیان) is a government-provided interface for registered businesses in Iran to submit tax-related data digitally. This API is accessible through https://tp.tax.gov.ir/requestsmanager/api/v2/.
+The Moadian API is a web service provided by Iran's tax authority (`tp.tax.gov.ir`) to help businesses digitally issue, submit, and manage their invoices and tax data. This API uses digital signatures, secure tokens, and certificate-based authentication.
 
-This repository provides a minimal, step-by-step PHP example showing how to:
+## How to Use
 
-- Request a nonce token.
-- Create a signed JWS token using your certificate and keys.
-- Send a test request to fetch server information from the Moadian API.
+There are **three key steps** involved in authenticating and sending a request to the Moadian API:
 
-## 🚀 Quick Start
+1. **Get a Nonce Token**  
+   This is a temporary token (valid between 10 and 200 seconds) used for generating a signed request.
 
-Make sure you have your required files ready:
+2. **Generate a JWS Token**  
+   Using your private key, public key, and certificate, generate a **JWS (JSON Web Signature)** based on the nonce. This token is used to authenticate further API requests. (Note: JWS is not the same as JWT.)
 
-- Private Key (.key)
-- Public Key (.pem)
-- Certificate (.crt) (NOT CSR file)
+3. **Send API Request**  
+   Use the JWS token to authenticate and make requests, such as querying the server status or submitting invoices.
 
-Steps to Run:
+### Run the Example
+
+We've created 3 simple PHP scripts:
 
 ```bash
-php nonce.php               # Step 1: Get the nonce token
-php jws.php                 # Step 2: Generate a signed JWS token
-php server-information.php  # Step 3: Send a test request using the token
+php nonce.php              # Step 1 - Get Nonce Token
+php jws.php                # Step 2 - Generate JWS
+php server-information.php # Step 3 - Send API Request
 ```
 
-Ensure you've configured your key and certificate paths correctly in the jws.php file.
+Before running the scripts, make sure you:
 
-## 📂 File Structure
+- Add your private key, public key, and certificate to the same folder
+- Edit `jws.php` and configure the path to your key files
 
-- `nonce.php`: Retrieves a short-lived nonce token from Moadian.
-- `jws.php`: Signs the nonce using your private key and certificate to generate a JWS.
-- `server-information.php`: Sends a test request using the JWS to fetch server info.
+---
 
-## 📄 API Documentation
+## Documentation
 
-**Base URL:** https://tp.tax.gov.ir/requestsmanager/api/v2/
+- API Base URL: `https://tp.tax.gov.ir/requestsmanager/api/v2/`
+- Official Documentation (as of 2025-05-25):  
+  [دانلود دستورالعمل فنی اتصال به سامانه مؤدیان (نسخه دوم)](https://www.intamedia.ir/Portals/0/news/Terminals/%D8%AF%D8%B3%D8%AA%D9%88%D8%B1%D8%A7%D9%84%D8%B9%D9%85%D9%84%20%D9%81%D9%86%DB%8C%20%D8%A7%D8%AA%D8%B5%D8%A7%D9%84%20%D8%A8%D9%87%20%D8%B3%D8%A7%D9%85%D8%A7%D9%86%D9%87%20%D9%85%D9%88%D8%AF%DB%8C%D8%A7%D9%86_2.pdf?ver=yHtC9Lnqny-NoKyYZqUd8w%3D%3D)
 
-**Official PDF documentation (as of 2025-05-25):**
-![Official PDF documentation](دستورالعمل%20فنی%20اتصال%20به%20سامانه%20مودیان.pdf)
+![PDF file documentation](دستورالعمل%20فنی%20اتصال%20به%20سامانه%20مودیان.pdf)
+
+---
+
+## Getting Started with Moadian
+
+### 1. Register
+
+- Visit [my.tax.gov.ir](https://my.tax.gov.ir)
+- Register your organization or company
+
+### 2. Get Your Keys (In Person)
+
+Go to your local tax office and request:
+
+- Private Key
+- Public Key
+- Certificate File
+
+You will receive a `.rar` or `.zip` archive with your cryptographic materials.
+
+![rar-file](demo/rar-file.jpg)
+
+### 3. Log in and Configure
+
+- Sign in at [my.tax.gov.ir](https://my.tax.gov.ir) with OTP verification  
+- Enter the platform and click on **"ورود به کارپوشه"** to reach `tp.tax.gov.ir`
+
+![my-tax-gov](demo/my-tax-gov-ir.jpg)
+
+![tp-tax-step1](demo/tp-tax-gov-ir-1.jpg)
+
+![tp-tax-step2](demo/tp-tax-gov-ir-2.jpg)
+
+![tp-tax-step3](demo/tp-tax-gov-ir-3.jpg)
+
+Follow the steps and upload your **public key**.
+
+---
+
+## Alternative Tools
+
+### Online Services
+
+- [https://moadian.finto.ir](https://moadian.finto.ir) allows you to generate private/public/CSR files and manage invoices online.
+
+> ⚠️ You can generate keys online but you won't receive a certificate file. Without a certificate, you can't directly connect using your own API/code.
+
+![finto-step1](demo/moadian-finto-ir-1.jpg)
+
+![finto-step2](demo/moadian-finto-ir-2.jpg)
+
+### Other Key Generators
+
+- [https://csr.orash.ir](https://csr.orash.ir)
+
+![orash-csr](demo/csr-orash-ir.jpg)
+
+---
+
+## Summary Screenshot from Official Docs
+
+![document-summary](demo/document-1.jpg)
+
+---
+
+## Final Step
+
+Once you have your keys and certificate:
+
+- Go to [https://tp.tax.gov.ir/membership/normalUniqueID/add](https://tp.tax.gov.ir/membership/normalUniqueID/add)
+- Register and connect your certificate
+
+![tp-final](demo/tp-tax-gov-ir.jpg)
+
+---
+
+## License
+
+**MIT License**
+
+© 2025 [Max Base](https://github.com/BaseMax)
 
 ## Using
 
@@ -147,8 +229,3 @@ Go to https://tp.tax.gov.ir/membership/normalUniqueID/add panel.
 
 ![](demo/tp-tax-gov-ir.jpg)
 
-# License
-
-License MIT
-
-Copyright 2025, Max Base
