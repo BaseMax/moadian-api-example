@@ -157,6 +157,21 @@ Latest version at thie date 05/25/2025 is this PDF:
 
 https://www.intamedia.ir/Portals/0/news/Terminals/%D8%AF%D8%B3%D8%AA%D9%88%D8%B1%D8%A7%D9%84%D8%B9%D9%85%D9%84%20%D9%81%D9%86%DB%8C%20%D8%A7%D8%AA%D8%B5%D8%A7%D9%84%20%D8%A8%D9%87%20%D8%B3%D8%A7%D9%85%D8%A7%D9%86%D9%87%20%D9%85%D9%88%D8%AF%DB%8C%D8%A7%D9%86_2.pdf?ver=yHtC9Lnqny-NoKyYZqUd8w%3D%3D
 
+## Useful URLs
+
+- https://csr.orash.ir/#check
+- https://movadian.com/blog/%D8%AF%D8%B1%DB%8C%D8%A7%D9%81%D8%AA-%DA%AF%D9%88%D8%A7%D9%87%DB%8C-%D8%A7%D9%85%D8%B6%D8%A7%DB%8C-%D8%A7%D9%84%DA%A9%D8%AA%D8%B1%D9%88%D9%86%DB%8C%DA%A9%DB%8C-csr/
+- https://www.gica.ir/portal/
+- https://www.hoofer.cloud/%D8%AF%D8%B1%DB%8C%D8%A7%D9%81%D8%AA-%DA%AF%D9%88%D8%A7%D9%87%DB%8C-%D8%A7%D9%84%DA%A9%D8%AA%D8%B1%D9%88%D9%86%DB%8C%DA%A9%DB%8C-%D8%A8%D8%A7-csr/
+- https://www.gica.ir/portal/
+- https://landing.sepidarsystem.com/dl-csr/?_gl=1*1k2878q*_gcl_au*NTc4MjE3MTEuMTc0NjgyMDQ5MA..
+- https://www.sepidarsystem.com/blog/how-to-receive-csr-electronic-signature/
+- https://www.intamedia.ir/Portals/0/news/Terminals/%D8%AF%D8%B3%D8%AA%D9%88%D8%B1%D8%A7%D9%84%D8%B9%D9%85%D9%84%20%D9%81%D9%86%DB%8C%20%D8%A7%D8%AA%D8%B5%D8%A7%D9%84%20%D8%A8%D9%87%20%D8%B3%D8%A7%D9%85%D8%A7%D9%86%D9%87%20%D9%85%D9%88%D8%AF%DB%8C%D8%A7%D9%86_2.pdf?ver=yHtC9Lnqny-NoKyYZqUd8w%3d%3d
+- https://sandboxrc.tax.gov.ir/membership/normalUniqueID
+- https://jwt.io/
+- https://tp.tax.gov.ir/membership/normalUniqueID/add
+- https://moadian.finto.ir/settings/TSP
+
 ---
 
 ## License
