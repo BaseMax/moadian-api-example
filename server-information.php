@@ -7,8 +7,7 @@
  *
  **/
 
-// Config
-$jwsToken = "";
+require_once "jws.php"; // for $jwsToken
 
 $headers = [
     "Authorization: Bearer $jwsToken",
