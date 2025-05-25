@@ -26,4 +26,4 @@ if (!$nonce) {
     die("nonce یافت نشد.");
 }
 
-print $nonce;
+print "Nonce: $nonce\n";
