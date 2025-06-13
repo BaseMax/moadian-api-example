@@ -138,7 +138,9 @@ Once you have your keys and certificate:
 We need to follow 3 steps until connecting and sending a test request to Moadian webservice.
 
 1- First step is to get nonce token which is a random token that is valid from 10s up to 200s. (You have short time to use this token and do your job, so max is 200s and min is 10s and default is 30s)
+
 2- Second step is to use your certificate, private key, etc to mix nonce token with your keys to generate a JWS. JWS is different form JWT. we are going to use JWS token in the future requets in header.
+
 3- Now everything is done, and you can use the token in your requests. for example here we are just going to send a test request to fetch server information from Moadian tax.gov.ir API webservice.
 
 ```bash
